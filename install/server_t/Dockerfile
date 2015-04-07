@@ -2,7 +2,7 @@ FROM centos:6.6
 MAINTAINER Rodrigo Tsuru <caixapostal@gmail.com>
 # Install required libs
 # http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.qb.server.doc/doc/r0008865.html?cp=SSEPGG_10.5.0%2F2-0-1-2-2-4&lang=en
-RUN yum install libaio.i686 \
+RUN yum install -y libaio.i686 \
 libaio.x86_64  \
 wget
 # Copies the script to downalod
