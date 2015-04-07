@@ -4,7 +4,14 @@ MAINTAINER Rodrigo Tsuru <caixapostal@gmail.com>
 # http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.qb.server.doc/doc/r0008865.html?cp=SSEPGG_10.5.0%2F2-0-1-2-2-4&lang=en
 RUN yum install -y libaio.i686 \
 libaio.x86_64  \
-wget
+pam.i686 \
+pam.x86_64 \
+compat-libstdc++-33.i686 \
+compat-libstdc++-33.x86_64 \
+wget \
+tar \
+ksh.x86_64
+
 # Copies the script to downalod
 RUN cd /tmp && wget https://googledrive.com/host/0B1TfHhOuw5TLMWw2YkNITVhWWjQ/v10.5_linuxx64_server_t.tar.gz
 RUN cd /tmp && \
