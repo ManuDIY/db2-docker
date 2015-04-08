@@ -15,6 +15,7 @@ libgcc.x86_64 \
 sg3_utils \
 wget \
 tar \
+file \
 ksh.x86_64
 
 # Copies the script to downalod
