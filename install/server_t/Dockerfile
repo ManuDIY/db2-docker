@@ -8,6 +8,11 @@ pam.i686 \
 pam.x86_64 \
 compat-libstdc++-33.i686 \
 compat-libstdc++-33.x86_64 \
+glibc.i686 \
+glibc.x86_64 \
+libgcc.i686 \
+libgcc.x86_64 \
+sg3_utils \
 wget \
 tar \
 ksh.x86_64
