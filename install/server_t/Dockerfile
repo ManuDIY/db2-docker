@@ -15,6 +15,8 @@ glibc.x86_64 \
 libgcc.i686 \
 libgcc.x86_64 \
 sg3_utils \
+kernel-devel \
+gcc-c++ \
 wget \
 tar \
 file \
