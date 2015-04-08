@@ -34,7 +34,7 @@ rm v10.5_linuxx64_server_t.tar.gz
 COPY db2server.rsp /tmp/db2server.rsp
 # Install DB2 and remove the installer.
 RUN cd /tmp/server_t && \
-./db2prereqcheck && \
+./db2prereqcheck -v 10.5.0.5 && \
 ( ./db2setup -r /tmp/db2server.rsp && \
 cat /tmp/db2setup.log || cat /tmp/db2setup.log ) && \
 /opt/ibm/db2/V10.5/bin/db2val -o && \
