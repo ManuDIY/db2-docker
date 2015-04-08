@@ -6,6 +6,8 @@ RUN yum install -y libaio.i686 \
 libaio.x86_64  \
 pam.i686 \
 pam.x86_64 \
+libstdc++.i686 \
+libstdc++.x86_64 \
 compat-libstdc++-33.i686 \
 compat-libstdc++-33.x86_64 \
 glibc.i686 \
@@ -16,7 +18,10 @@ sg3_utils \
 wget \
 tar \
 file \
-ksh.x86_64
+ksh.x86_64 \
+patch \
+ntpd \
+gcc
 
 # Copies the script to downalod
 RUN cd /tmp && wget https://googledrive.com/host/0B1TfHhOuw5TLMWw2YkNITVhWWjQ/v10.5_linuxx64_server_t.tar.gz
