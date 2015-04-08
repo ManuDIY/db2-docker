@@ -69,7 +69,7 @@ INTERACTIVE              = NONE            ** NONE, YES, MACHINE
 ** used for creating or configuring an instance, and nothing is to be
 ** installed. This keyword must be set to YES if a response file is used with
 ** db2isetup.
-CONFIG_ONLY              = YES                ** YES or NO
+CONFIG_ONLY              = NO                ** YES or NO
 
 ** INSTALL_TYPE keyword is used to select the installation type. If you specify
 ** a TYPICAL or a COMPACT install type, no COMP keywords are required. In this
