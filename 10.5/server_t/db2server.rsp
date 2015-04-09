@@ -38,7 +38,7 @@
 
 ** Only one product can be specified for the following PROD keyword. Specifying
 ** multiple products in an installation is not supported.
-PROD                      = ENTERPRISE_SERVER_EDITION
+PROD                      = DB2_SERVER_EDITION
 
 ** The FILE keyword determines the base installation path. If you specify a
 ** path that does not yet have this product, this will install a new copy.  If
@@ -69,7 +69,7 @@ INTERACTIVE              = NONE            ** NONE, YES, MACHINE
 ** used for creating or configuring an instance, and nothing is to be
 ** installed. This keyword must be set to YES if a response file is used with
 ** db2isetup.
-CONFIG_ONLY              = YES                ** YES or NO
+CONFIG_ONLY              = NO                ** YES or NO
 
 ** INSTALL_TYPE keyword is used to select the installation type. If you specify
 ** a TYPICAL or a COMPACT install type, no COMP keywords are required. In this
@@ -279,7 +279,7 @@ DB2_INST.PASSWORD         = Replace with your password ** Valid for root install
 
 ** If APPLICATION_CLUSTER_TRANSPARENCY is selected or installed, the default
 ** instance type will be DSF.
-*DB2_INST.TYPE            = ESE             ** DSF ESE WSE STANDALONE CLIENT
+DB2_INST.TYPE            = ESE             ** DSF ESE WSE STANDALONE CLIENT
 
 ** Set the instance to be auto-started after system reboot. The AUTOSTART
 ** keyword can only be used by a root installation and only a non-Application
@@ -291,8 +291,8 @@ DB2_INST.AUTOSTART        = YES             ** YES or NO
 ** installation.  If this keyword is not specified, the behavior follows the
 ** AUTOSTART keyword above.
 DB2_INST.START_DURING_INSTALL = YES         ** YES or NO. Default is YES.
-*DB2_INST.SVCENAME        = db2c_db2inst1   ** BLANK or char(14). Reserved for root installation only
-*DB2_INST.PORT_NUMBER     = 50000           ** 1024 - 65535, Reserved for root installation only
+DB2_INST.SVCENAME        = db2c_db2inst1   ** BLANK or char(14). Reserved for root installation only
+DB2_INST.PORT_NUMBER     = 50000           ** 1024 - 65535, Reserved for root installation only
 
 ** The ports in range [FCM_PORT_NUMBER, FCM_PORT_NUMBER+MAX_LOGICAL_NODES] are
 ** reserved during the installation. Valid for root installation only. If your
@@ -390,12 +390,12 @@ DB2_INST.START_DURING_INSTALL = YES         ** YES or NO. Default is YES.
 
 ** Make sure the user name specified for FENCED_USERNAME is not locked and its
 ** password has not expired.
-DB2_INST.FENCED_USERNAME  = db2sdfe1        ** char(8)  no spaces, no upper case letters
+*DB2_INST.FENCED_USERNAME  = db2sdfe1        ** char(8)  no spaces, no upper case letters
 
 ** If no value is provided for FENCED_UID keyword, the DB2 installer will
 ** generate one for you. This is highly recommended.
 *DB2_INST.FENCED_UID      =                 ** Unsigned integer
-DB2_INST.FENCED_GROUP_NAME = db2fsdm1       ** char(30)  no spaces
+*DB2_INST.FENCED_GROUP_NAME = db2fsdm1       ** char(30)  no spaces
 
 ** If no value is provided for FENCED_GID keyword, the DB2 installer will
 ** generate one for you. This is highly recommended.
